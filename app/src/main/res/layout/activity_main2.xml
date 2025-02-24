@@ -15,6 +15,6 @@
         android:layout_width="400dp"
         android:layout_height="200dp"
         android:gravity="center"
-        android:text="Hellow Nigger"
+        android:text="Hellow Albert"
         android:textSize="48sp" />
 </LinearLayout>

@@ -11,13 +11,34 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+/**
+ * @author  ior Shem Tov
+ * @version	1.1
+ * @since	24/02/2025
+ * Manage the app
+ */
 
+/**
+ * The type Main activity.
+ */
 public class MainActivity extends AppCompatActivity {
 
+    /**
+     * The E d 1.
+     */
     EditText eD1;
+    /**
+     * The Tv 1.
+     */
     TextView tv1;
 
+    /**
+     * The Count.
+     */
     int count = 0;
+    /**
+     * The Str data.
+     */
     String str_data = "";
 
     @Override
@@ -31,12 +52,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    /**
+     * Weddings.
+     */
     public void weddings()
     {
         eD1 = (EditText) findViewById(R.id.eD1);
         tv1 = (TextView) findViewById(R.id.tv1);
     }
 
+    /**
+     * Read data.
+     */
     public void read_data()
     {
         SharedPreferences settings = getSharedPreferences("Data_fill",MODE_PRIVATE);
@@ -46,6 +73,9 @@ public class MainActivity extends AppCompatActivity {
         tv1.setText(count + "");
     }
 
+    /**
+     * Write data.
+     */
     public void write_data()
     {
         SharedPreferences settings = getSharedPreferences("Data_fill",MODE_PRIVATE);
@@ -56,6 +86,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    /**
+     * Btn 1 count.
+     *
+     * @param view the view
+     */
     public void btn1_count(View view)
     {
         count++;
@@ -63,6 +98,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Btn 2 reset.
+     *
+     * @param view the view
+     */
     public void btn2_reset(View view)
     {
         count = 0;
@@ -70,6 +110,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Btn 3 exit.
+     *
+     * @param view the view
+     */
     public void btn3_exit(View view)
     {
         write_data();
